@@ -73,7 +73,7 @@ public class EventListener implements Listener {
 
         if(action != Action.RIGHT_CLICK_BLOCK && action != Action.RIGHT_CLICK_AIR) return;
 
-        if(item.getType() != Material.LEATHER && item.getAmount() < 8) return;
+        if(item.getType() != Material.LEATHER || item.getAmount() < 8) return;
 
         for(Entity entity : detectEntity(player.getLocation())){
 
